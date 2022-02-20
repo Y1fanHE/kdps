@@ -2,7 +2,7 @@
  * @Author: He,Yifan
  * @Date: 2022-02-17 16:13:21
  * @LastEditors: He,Yifan
- * @LastEditTime: 2022-02-20 15:44:36
+ * @LastEditTime: 2022-02-20 15:55:13
 -->
 
 # Knowledge-Driven Program Synthesis
@@ -15,8 +15,8 @@ A convenient tool for experiments on knowledge-driven program synthesis based on
 1. install pgsyn
 
     ```bash
-    git clone https://github.com/Y1fanHE/pgsyn.git
-    cd pgsyn
+    git clone https://github.com/Y1fanHE/kdps.git
+    cd kdps
     pip install --editable .
     ```
 
