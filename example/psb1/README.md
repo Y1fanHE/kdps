@@ -2,12 +2,12 @@
  * @Author: He,Yifan
  * @Date: 2021-09-09 23:38:24
  * @LastEditors: He,Yifan
- * @LastEditTime: 2022-02-19 19:24:46
+ * @LastEditTime: 2022-02-20 15:45:14
 -->
 
-# Program Synthesis Benchmark
+# Program Synthesis Benchmark 1
 
-- [Program Synthesis Benchmark](#program-synthesis-benchmark)
+- [Program Synthesis Benchmark 1](#program-synthesis-benchmark-1)
   - [1. Number IO (Q 3.5.1)](#1-number-io-q-351)
   - [2. Small or Large (Q 4.6.3)](#2-small-or-large-q-463)
   - [3. For Loop Index (Q 4.11.7)](#3-for-loop-index-q-4117)
