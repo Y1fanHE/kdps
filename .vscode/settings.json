@@ -1,0 +1,10 @@
+{
+    "yaml.customTags": [
+        "!closer",
+        "!input",
+        "!instr",
+        "!char",
+        "!visible",
+        "!visible+",
+    ]
+}
