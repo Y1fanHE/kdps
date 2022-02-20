@@ -2,7 +2,7 @@
 Author: He,Yifan
 Date: 2022-02-16 20:02:10
 LastEditors: He,Yifan
-LastEditTime: 2022-02-20 19:59:55
+LastEditTime: 2022-02-20 22:46:22
 '''
 
 
@@ -131,6 +131,7 @@ if __name__ == "__main__":
     start = time.time()
     est.fit(X=X_train, y=y_train)
     end = time.time()
+    np.save("solution.npy", est.solution.genome, allow_pickle=True)
     print("========================================")
     print("post-evolution stats")
     print("========================================")
