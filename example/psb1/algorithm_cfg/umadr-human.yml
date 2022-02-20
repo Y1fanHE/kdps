@@ -1,0 +1,13 @@
+PUSHGP:
+  search: UMADR
+  interpreter: default
+  verbose: 2
+  UMADR:
+    population_size: 1000
+    max_generations: 300
+    selection: lexicase
+    addition_rate: 0.09
+    deletion_rate: 0.0826
+    replacement_rate: 0.1
+    ka: human_yaml
+    parallelism: yes
