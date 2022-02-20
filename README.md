@@ -2,7 +2,7 @@
  * @Author: He,Yifan
  * @Date: 2022-02-17 16:13:21
  * @LastEditors: He,Yifan
- * @LastEditTime: 2022-02-20 15:55:13
+ * @LastEditTime: 2022-02-20 15:56:57
 -->
 
 # Knowledge-Driven Program Synthesis
@@ -26,7 +26,8 @@ See the following example.
 
 1. Download dataset of PSB1 and put the folder into `example/psb1`.
 
-2. The YAML config files of problems and algorithms are in `example/psb1/problem_cfg` and `example/psb1/algorithm_cfg`.
+2. The YAML config files of problems and algorithms are in
+   `example/psb1/problem_cfg` and `example/psb1/algorithm_cfg`.
 
 ```bash
 cd example/psb1
