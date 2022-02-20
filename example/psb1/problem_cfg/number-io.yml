@@ -1,0 +1,44 @@
+PROBLEM:
+  name: number-io
+  path_to_root: psgb
+  train:
+    edge:
+    random: 25
+  test:
+    edge:
+    random: 1000
+  n_inputs: 2
+  stacks: [int, float, exec, stdout]
+  literals: []
+  erc_int:
+    - [-100, 100]
+    - randint
+  erc_flt:
+    - [-100, 100]
+    - randfloat
+  output_types:
+    output1: str
+  last_str_from_stdout: yes
+  step_limit: 200
+  error_threshold: 1.e-4
+  initial_genome_size: [20, 100]
+  max_genome_size: 800
+  simplification_steps: 5000
+
+KNOWLEDGE_ARCHIVE:
+  human_yaml:
+    mode: yaml
+    genome_set:
+      -
+        - !input 0
+        - !input 1
+        - !instr float_add
+      -
+        - !instr print_float
+  human_file:
+    mode: file
+    path: ka.npy
+  random:
+    mode: random
+    genome_set_size: 5
+    genome_length: [2, 5]
