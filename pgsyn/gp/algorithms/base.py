@@ -106,6 +106,7 @@ class SearchAlgorithm(ABC):
                 self.parallel_context = ParallelContext(spawner, evaluator)
         elif parallelism > 1:
             self.parallel_context = ParallelContext(spawner, evaluator, parallelism)
+        return self.parallel_context
 
     def get_selector(self, selection, **kwargs):
         if isinstance(selection, Selector):
