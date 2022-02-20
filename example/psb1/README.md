@@ -2,8 +2,10 @@
  * @Author: He,Yifan
  * @Date: 2021-09-09 23:38:24
  * @LastEditors: He,Yifan
- * @LastEditTime: 2022-02-20 15:45:14
+ * @LastEditTime: 2022-02-20 17:07:44
 -->
+
+<div id="top"></div>
 
 # Program Synthesis Benchmark 1
 
@@ -47,6 +49,8 @@ Given an integer and a float, print their sum.
 - **Primitives**: `int`, `float`, `print`
 - **Terminals**: `int~[-100,100]`, `float~[-100,100)`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 2. Small or Large (Q 4.6.3)
 
 Given an integer $n$, print `"small"` if $n < 1000$ and `"large"` if $n ≥ 2000$ (and nothing if $1000 \leq n < 2000$).
@@ -55,6 +59,8 @@ Given an integer $n$, print `"small"` if $n < 1000$ and `"large"` if $n ≥ 2000
 - **Output**: printed string
 - **Primitives**: `exec`, `int`, `bool`, `str`, `print`
 - **Terminals**: `"small"`, `"large"`, `int~[-10000, 10000]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 3. For Loop Index (Q 4.11.7)
 
@@ -71,6 +77,8 @@ for each $n_i < end$, each on their own line.
 - **Primitives**: `exec`, `int`, `bool`, `print`
 - **Terminals**: None
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 4. Compare String Lengths (Q 4.11.13)
 
 Given three strings $n_1$, $n_2$, and $n_3$, return `true` if $length(n_1) < length(n_2) < length(n_3)$, and `false` otherwise.
@@ -79,6 +87,8 @@ Given three strings $n_1$, $n_2$, and $n_3$, return `true` if $length(n_1) < len
 - **Output**: boolean
 - **Primitives**: `exec`, `int`, `bool`, `str`
 - **Terminals**: `bool~[True,False]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 5. Double Letters (P 4.1)
 
@@ -89,6 +99,8 @@ Given a string, print the string, doubling every letter character, and tripling 
 - **Primitives**: `exec`, `int`, `bool`, `char`, `string`, `print`
 - **Terminals**: `'!'`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 6. Collatz Numbers (P 4.2)
 
 Given an integer, find the number of terms in the Collatz (hailstone) sequence starting from that integer.
@@ -98,6 +110,8 @@ Given an integer, find the number of terms in the Collatz (hailstone) sequence s
 - **Primitives**: `exec`, `int`, `float`, `bool`
 - **Terminals**: `0`, `1`, `int~[-100,100]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 7. Replace Space with Newline (P 4.3)
 
 Given a string input, print the string, replacing spaces with newlines. Also, return the integer count of the non-whitespace characters. The input string will not have tabs or newlines.
@@ -106,6 +120,8 @@ Given a string input, print the string, replacing spaces with newlines. Also, re
 - **Output**: printed string, integer
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `print`
 - **Terminals**: `' '`, `'\n'`, `char~['\n','\t',visible char]`, `input of length [1,20]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 8. String Differences (P 4.4)
 
@@ -122,6 +138,8 @@ Given $2$ strings (without whitespace) as input, find the indices at which the s
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `print`
 - **Terminals**: `' '`, `'\n'`, `int~[-10,10]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 9. Even Squares (Q 5.4.1)
 
 Given an integer $n$, print all of the positive even perfect squares less than $n$ on separate lines.
@@ -130,6 +148,8 @@ Given an integer $n$, print all of the positive even perfect squares less than $
 - **Output**: printed string
 - **Primitives**: `exec`, `int`, `bool`, `print`
 - **Terminals**: None
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 10. Wallis Pi (P 6.4)
 
@@ -144,6 +164,8 @@ Given an integer input $n$, compute an approximation of this product out to $n$ 
 - **Primitives**: `exec`, `int`, `float`, `bool`
 - **Terminals**: `int~[-500, 500]`, `int~[-10,10]`, `float~[-500,500)`, `float~[0,1)`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 11. String Lengths Backwards (Q 7.2.5)
 
 Given a vector of strings, print the length of each string in the vector starting with the last and ending with the first.
@@ -152,6 +174,9 @@ Given a vector of strings, print the length of each string in the vector startin
 - **Output**: printed string
 - **Primitives**: `exec`, `int`, `bool`, `str`, `vec_str`, `print`
 - **Terminals**: `int~[-100,100]`
+
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 12. Last Index of Zero (Q 7.7.8)
 
@@ -162,6 +187,9 @@ Given a vector of integers, at least one of which is $0$, return the index of th
 - **Primitives**: `exec`, `int`, `bool`, `vec_int`
 - **Terminals**: `0`
 
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 13. Vector Average (Q 7.7.11)
 
 Given a vector of floats, return the average of those floats. Results are rounded to $4$ decimal places.
@@ -171,6 +199,8 @@ Given a vector of floats, return the average of those floats. Results are rounde
 - **Primitives**: `exec`, `int`, `float`, `vec_float`
 - **Terminals**: None
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 14. Count Odds (Q 7.7.12)
 
 Given a vector of integers, return the number of integers that are odd, without use of a specific even or odd instruction (but allowing instructions such as mod and quotient).
@@ -179,6 +209,8 @@ Given a vector of integers, return the number of integers that are odd, without 
 - **Output**: integer
 - **Primitives**: `exec`, `int`, `bool`, `vec_int`
 - **Terminals**: `0`, `1`, `2`, `int~[-1000,1000]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 15. Mirror Image (Q 7.7.15)
 
@@ -190,6 +222,8 @@ integer in $[−1000,1000]$
 - **Primitives**: `exec`, `int`, `bool`, `vec_int`
 - **Terminals**: `bool~[True,False]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 16. Super Anagrams (P 7.3)
 
 Given strings $x$ and $y$ of lowercase letters, return true if $y$ is a super anagram of $x$, which is the case if every character in $x$ is in $y$. To be true, $y$ may contain extra characters, but must have at least as many copies of each character as $x$ does.
@@ -199,6 +233,8 @@ Given strings $x$ and $y$ of lowercase letters, return true if $y$ is a super an
 - **Primitives**: `exec`, `bool`, `char`, `str`
 - **Terminals**: `bool~[True,False]`, `char~['\n','\t',visible char]`, `int~[-1000,1000]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 17. Sum of Squares (Q 8.5.4)
 
 Given integer $n$, return the sum of squaring each integer in the range $[1,n]$.
@@ -207,6 +243,8 @@ Given integer $n$, return the sum of squaring each integer in the range $[1,n]$.
 - **Output**: integer
 - **Primitives**: `exec`，`int`, `bool`
 - **Terminals**: `0`, `1`, `int~[-100,100]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 18. Vectors Summed (Q 8.7.6)
 
@@ -218,6 +256,8 @@ integer in $[−1000,1000]$
 - **Primitives**: `exec`, `int`, `vec_int`
 - **Terminals**: `[]`, `int~[-1000,1000]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 19. X-Word Lines (P 8.1)
 
 Given an integer $X$ and a string that can contain spaces and newlines, print the string with exactly $X$ words per line. The last line may have fewer than $X$ words.
@@ -227,6 +267,8 @@ Given an integer $X$ and a string that can contain spaces and newlines, print th
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `print`
 - **Terminals**: `'\n'`, `' '`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 20. Pig Latin (P 8.2)
 
 Given a string containing lowercase words separated by single spaces, print the string with each word translated to pig Latin. Specifically, if a word starts with a vowel, it should have `"ay"` added to its end; otherwise, the first letter is moved to the end of the word, followed by `"ay"`.
@@ -235,6 +277,8 @@ Given a string containing lowercase words separated by single spaces, print the 
 - **Output**: printed string
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `print`
 - **Terminals**: `"ay"`, `' '`, `'a'`, `'e'`, `'i'`, `'o'`, `'u'`, `"aeiou"`, `str~pig-latin-input`, `char~[visible char]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 21. Negative To Zero (Q 9.6.8)
 
@@ -246,6 +290,8 @@ in $[−1000,1000]$
 - **Primitives**: `exec`, `int`, `bool`, `vec_int`
 - **Terminals**: `0`, `[]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 22. Scrabble Score (P 10.1)
 
 Given a string of visible ASCII characters, return the Scrabble score for that string. Each letter has a corresponding value according to normal Scrabble rules, and non-letter characters are worth zero.
@@ -254,6 +300,8 @@ Given a string of visible ASCII characters, return the Scrabble score for that s
 - **Output**: integer
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `vec_int`
 - **Terminals**: vector containing Scrabble values (indexed by ASCII values)
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 23. Word Stats (P 10.5)
 
@@ -281,6 +329,8 @@ A word is any string of consecutive non-whitespace characters (including sentenc
 - **Primitives**: `exec`, `int`, `float`, `bool`, `char`, `str`, `vec_int`, `vec_float`, `vec_str`, `file_input`
 - **Terminals**: `'.'`, `'?'`, `'!'`, `' '`, `'\t'`, `'\n'`, `[]`, `"words of length "`, `": "`, `"number of sentences: "`, `"average sentence length: "`, `int~[-100,100]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 24. Checksum
 
 Given a string, convert each character in the string into its integer ASCII value, sum them, take the sum modulo $64$, add the integer value of the space character, and then convert that integer back into its corresponding character (the checksum character). The program must print Check sum is $X$, where $X$ is replaced by the correct checksum character.
@@ -289,6 +339,8 @@ Given a string, convert each character in the string into its integer ASCII valu
 - **Output**: printed string
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `print`
 - **Terminals**: `"Check sum is "`, `' '`, `64`, `int~[-128,128]`, `char~['\n','\t',visible char]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 25. Digits
 
@@ -299,6 +351,8 @@ Given an integer, print that integer's digits each on their own line starting wi
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `print`
 - **Terminals**: `'\n'`, `int~[-10, 10]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 26. Grade
 
 Given $5$ integers, the first four represent the lower numeric thresholds for achieving an `A`, `B`, `C`, and `D`, and will be distinct and in descending order. The fifth represents the student's numeric grade. The program must print Student has a $X$ grade., where $X$ is `A`, `B`, `C`, `D`, or `F` depending on the thresholds and the numeric grade.
@@ -307,6 +361,8 @@ Given $5$ integers, the first four represent the lower numeric thresholds for ac
 - **Output**: printed string
 - **Primitives**: `exec`, `int`, `bool`, `str`, `print`
 - **Terminals**: `"Student has a "`, `" grade."`, `"A"`, `"B"`, `"C"`, `"D"`, `"F"`, `int~[0,100]`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
 
 ## 27. Median
 
@@ -317,6 +373,8 @@ Given $3$ integers, print their median.
 - **Primitives**: `exec`, `int`, `bool`, `print`
 - **Terminals**: `int~[-100,100]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 28. Smallest
 
 Given $4$ integers, print the smallest of them.
@@ -326,6 +384,8 @@ Given $4$ integers, print the smallest of them.
 - **Primitives**: `exec`, `int`, `bool`, `print`
 - **Terminals**: `int~[-100,100]`
 
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
+
 ## 29. Syllables
 
 Given a string containing symbols, spaces, digits, and lowercase letters, count the number of occurrences of vowels (`a`, `e`, `i`, `o`, `u`, `y`) in the string and print that number as $X$ in The number of syllables is $X$.
@@ -334,3 +394,5 @@ Given a string containing symbols, spaces, digits, and lowercase letters, count 
 - **Output**: printed string
 - **Primitives**: `exec`, `int`, `bool`, `char`, `str`, `print`
 - **Terminals**: `"The number of syllables is "`, `"aeiouy"`, `'a'`, `'e'`, `'i'`, `'o'`, `'u'`, `'y'`, `char~['\n','\t',visible char]`, `str~syllables-input`
+
+<p align="right">&uparrow;<a href="#top">back to top</a></p>
