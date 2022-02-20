@@ -2,7 +2,7 @@
 Author: He,Yifan
 Date: 2022-02-17 01:06:47
 LastEditors: He,Yifan
-LastEditTime: 2022-02-20 21:52:32
+LastEditTime: 2022-02-21 00:12:09
 '''
 
 
@@ -63,17 +63,17 @@ def load_psb(problem_name, path_to_dir, n_edge, n_random, io_types=None):
         if type_ in ["int", "bool", "float", "str"]:
             df = df.astype({io:type_})
         elif type_ == "char":
-            df[io] = pd.Series([Char(item) for item in df.io])
+            df[io] = pd.Series([Char(item) for item in df[io]])
         elif type_ == "vector_int":
-            df[io] = pd.Series([IntVector(item) for item in df.io])
+            df[io] = pd.Series([IntVector(item) for item in df[io]])
         elif type_ == "vector_bool":
-            df[io] = pd.Series([BoolVector(item) for item in df.io])
+            df[io] = pd.Series([BoolVector(item) for item in df[io]])
         elif type_ == "vector_float":
-            df[io] = pd.Series([FloatVector(item) for item in df.io])
+            df[io] = pd.Series([FloatVector(item) for item in df[io]])
         elif type_ == "vector_char":
-            df[io] = pd.Series([CharVector(item) for item in df.io])
+            df[io] = pd.Series([CharVector(item) for item in df[io]])
         elif type_ == "vector_str":
-            df[io] = pd.Series([StrVector(item) for item in df.io])
+            df[io] = pd.Series([StrVector(item) for item in df[io]])
         else:
             raise Exception(f"Cannot find a proper PushType for tag {type_}.")
 
