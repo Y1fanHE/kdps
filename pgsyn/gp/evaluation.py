@@ -2,7 +2,7 @@
 Author: He,Yifan
 Date: 2022-02-18 16:06:00
 LastEditors: He,Yifan
-LastEditTime: 2022-02-19 12:20:31
+LastEditTime: 2022-02-20 20:10:18
 '''
 
 
@@ -128,13 +128,14 @@ class Evaluator(ABC):
                 except OverflowError:
                     errors.append(self.penalty)
             elif isinstance(expected, str):
-                if is_float(expected):
-                    try:
-                        errors.append(abs(float(actual) - float(expected)))
-                    except (ValueError, OverflowError):
-                        errors.append(self.penalty)
-                else:
-                    errors.append(damerau_levenshtein_distance(str(actual), expected))
+                # if is_float(expected):
+                #     try:
+                #         errors.append(abs(float(actual) - float(expected)))
+                #     except (ValueError, OverflowError):
+                #         errors.append(self.penalty)
+                # else:
+                #     errors.append(damerau_levenshtein_distance(str(actual), expected))
+                errors.append(damerau_levenshtein_distance(str(actual), expected))
             elif isinstance(expected, list):
                 errors += list(self.default_error_function(list(actual), expected))
             else:
