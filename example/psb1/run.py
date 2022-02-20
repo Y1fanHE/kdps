@@ -2,7 +2,7 @@
 Author: He,Yifan
 Date: 2022-02-16 20:02:10
 LastEditors: He,Yifan
-LastEditTime: 2022-02-20 14:46:25
+LastEditTime: 2022-02-20 19:59:55
 '''
 
 
@@ -11,7 +11,6 @@ import os
 import time
 import numpy as np
 import yaml
-import string
 import sys
 
 from pgsyn.gp.estimators import PushEstimator
@@ -21,7 +20,9 @@ from pgsyn.push.config import PushConfig
 from pgsyn.push.instruction_set import InstructionSet
 from pgsyn.yaml_utils import register_yaml_constructors
 
-from utils import erc_generator, load_psb, randchar, randfloat, randint
+from utils import erc_generator, load_psb
+from utils import randchar, randfloat, randint, randbool, randstr
+from utils import randinput_replace_space_with_newline
 
 
 def get_psb(problem_filename):
@@ -33,9 +34,9 @@ def get_psb(problem_filename):
     n_train_random = problem.get("train").get("random", 100)
     n_test_edge = problem.get("test").get("edge", 0)
     n_test_random = problem.get("test").get("random", 1000)
-    output_types = problem.get("output_types")
-    X_train, y_train = load_psb(problem_name, path_to_root, n_train_edge, n_train_random, output_types)
-    X_test, y_test = load_psb(problem_name, path_to_root, n_test_edge, n_test_random, output_types)
+    io_types = problem.get("io_types")
+    X_train, y_train = load_psb(problem_name, path_to_root, n_train_edge, n_train_random, io_types)
+    X_test, y_test = load_psb(problem_name, path_to_root, n_test_edge, n_test_random, io_types)
     return X_train, y_train, X_test, y_test
 
 def get_erc_generators(problem):
@@ -43,13 +44,16 @@ def get_erc_generators(problem):
         "randint": randint,
         "randfloat": randfloat,
         "randchar": randchar,
+        "randbool": randbool,
+        "randinput_replace_space_with_newline": randinput_replace_space_with_newline,
     }
     erc_generators = []
     for key, value in problem.items():
         if key[:3] == "erc":
-            possible_values, method_str = value
+            possible_values = value.get("range", None)
+            method_str = value.get("method")
             method = methods.get(method_str)
-            erc_generators.append(partial(erc_generator, possible_values, method))
+            erc_generators.append(partial(erc_generator, method, possible_values))
     return erc_generators
 
 def get_spawner(problem):
