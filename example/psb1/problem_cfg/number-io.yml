@@ -11,12 +11,14 @@ PROBLEM:
   stacks: [int, float, exec, stdout]
   literals: []
   erc_int:
-    - [-100, 100]
-    - randint
+    method: randint
+    range: [-100, 100]
   erc_flt:
-    - [-100, 100]
-    - randfloat
-  output_types:
+    method: randfloat
+    range: [-100, 100]
+  io_types:
+    input1: int
+    input2: float
     output1: str
   last_str_from_stdout: yes
   step_limit: 200
