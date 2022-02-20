@@ -2,10 +2,10 @@
  * @Author: He,Yifan
  * @Date: 2022-02-17 16:13:21
  * @LastEditors: He,Yifan
- * @LastEditTime: 2022-02-20 15:32:11
+ * @LastEditTime: 2022-02-20 15:44:36
 -->
 
-# Program Synthesis
+# Knowledge-Driven Program Synthesis
 
 A convenient tool for experiments on knowledge-driven program synthesis based on
 [PyshGP](https://github.com/erp12/pyshgp)
