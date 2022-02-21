@@ -54,10 +54,20 @@ def erc_generator(method, possible_values, type_of_value: Callable = None):
         return method(possible_values)
 
 def load_psb(problem_name, path_to_dir, n_edge, n_random, io_types=None):
-    path_to_random = f"{path_to_dir}/{problem_name}/{problem_name}-random.csv"
-    path_to_edge = f"{path_to_dir}/{problem_name}/{problem_name}-edge.csv"
-    df_edge = pd.read_csv(path_to_edge).sample(n=n_edge) if n_edge else pd.DataFrame()
-    df_random = pd.read_csv(path_to_random).sample(n=n_random) if n_random else pd.DataFrame()
+    path_to_random = f"{path_to_dir}/{problem_name}/{problem_name}-random.json"
+    path_to_edge = f"{path_to_dir}/{problem_name}/{problem_name}-edge.json"
+    df_edge = pd.DataFrame()
+    df_random = pd.DataFrame()
+    if n_edge:
+        df_edge = pd.read_json(path_to_edge,
+                               orient="records",
+                               lines=True,
+                               precise_float=True).sample(n=n_edge)
+    if n_random:
+        df_random = pd.read_json(path_to_random,
+                                 orient="records",
+                                 lines=True,
+                                 precise_float=True).sample(n=n_random)
     df = pd.concat([df_edge, df_random])
     for io, type_ in io_types.items():
         if type_ in ["int", "bool", "float", "str"]:
@@ -87,5 +97,3 @@ def load_psb(problem_name, path_to_dir, n_edge, n_random, io_types=None):
     inputs = df[input_cols]
     outputs = df[output_cols]
     return inputs, outputs
-
-
