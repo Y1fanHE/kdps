@@ -17,13 +17,6 @@ from pgsyn.tap import tap
 from pgsyn.utils import Token
 
 
-def is_float(s):
-    try:
-        float(s)
-        return True
-    except ValueError:
-        return False
-
 def damerau_levenshtein_distance(a: Union[str, Sequence], b: Union[str, Sequence]) -> int:
     """Damerau-Levenshtein Distance that works for both strings and lists.
 
@@ -128,13 +121,6 @@ class Evaluator(ABC):
                 except OverflowError:
                     errors.append(self.penalty)
             elif isinstance(expected, str):
-                # if is_float(expected):
-                #     try:
-                #         errors.append(abs(float(actual) - float(expected)))
-                #     except (ValueError, OverflowError):
-                #         errors.append(self.penalty)
-                # else:
-                #     errors.append(damerau_levenshtein_distance(str(actual), expected))
                 errors.append(damerau_levenshtein_distance(str(actual), expected))
             elif isinstance(expected, list):
                 errors += list(self.default_error_function(list(actual), expected))
