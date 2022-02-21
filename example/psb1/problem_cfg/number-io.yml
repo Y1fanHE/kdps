@@ -17,8 +17,8 @@ PROBLEM:
     method: randfloat
     range: [-100, 100]
   io_types:
-    input1: int
-    input2: float
+    input1: float
+    input2: int
     output1: str
   last_str_from_stdout: yes
   step_limit: 200
