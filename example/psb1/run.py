@@ -135,5 +135,5 @@ if __name__ == "__main__":
     print("========================================")
     print("post-evolution stats")
     print("========================================")
-    print("Runtime: ", end - start)
+    print("Runtime: ", time.strftime('%H:%M:%S', time.gmtime(end - start)))
     print("Test Error: ", np.sum(est.score(X_test, y_test)))
