@@ -11,6 +11,7 @@
 
 - [ ] random seed during parallel running
 - [ ] track knowledge genes
+- [ ] evaluation for printed numerics
 
 ## PSB1 Example
 
